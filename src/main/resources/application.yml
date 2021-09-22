@@ -1,14 +1,13 @@
 server:
   port: 9999
 
-datasource:
-  url: jdbc:mysql://10.10.15.151:3306/dev?useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-  username: crm_dev
-  password: 'Mk4bepmvy2WXvP'
-  driverclassname: com.mysql.cj.jdbc.Driver
-  hikari:
-    maximumPoolSize: 50
-    connectionTimeout: 60000
-    idleTimeout: 60000
-  # profiles:
-  #   active: local
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    datasource:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/dev
+    username: root
+    password: 'your_pass'
+    driver-class-name: com.mysql.cj.jdbc.Driver
